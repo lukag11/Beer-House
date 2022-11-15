@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100;700&family=Kdam+Thmor+Pro&family=Poppins:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container-general {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background: url(../image/login/wallpaper-login.jpg) no-repeat center/cover;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 10px;
+    gap: 40px;
+}
+
+h2 {
+    font-family: 'Anek Malayalam',
+        sans-serif;
+    font-size: xx-large;
+    color: white;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+
+}
+
+form label {
+    padding-bottom: 50px;
+
+}
+
+form input {
+    margin-bottom: 10px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    padding: 0 40px;
+    box-shadow: 10px 10px 5px 4px rgba(0, 0, 0, 0.50);
+
+}
+
+.email:hover {
+    border: 1px solid greenyellow;
+
+}
+
+.pass:hover {
+    border: 1px solid greenyellow;
+}
+
+.btn {
+
+    background: greenyellow;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    border-radius: 0px 128px 0px 128px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.olvide-contraseña,
+.registrarse {
+    text-align: center;
+    padding: 2px;
+    margin: 10px;
+    color: yellow;
+    background: grey;
+    text-shadow: 0 0 15px rgba(255, 255, 255, .5),
+        0 0 10px rgba(255, 255, 255, .5);
+}
+
+.olvide-contraseña:hover,
+.registrarse:hover {
+
+    color: blue;
+}
+
+
+/* ! CONTENEDOR IMAGENES ICONOS */
+
+
+.container-item {
+
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.icono-vinculo {
+    margin: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/* ! IMAGEN USER */
+.fondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+.fondo {
+    position: relative;
+    /* width: 10%; */
+    animation: shake 0.8s ease-in-out, shake 3s cubic-bezier(0.36, 0.7, 0.1, 0.92);
+
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    20% {
+        transform: translate(-10px, 0) rotate(-20deg);
+    }
+
+    30% {
+        transform: translate(10px, 0) rotate(20deg);
+    }
+
+    50% {
+        transform: translate(-10px, 0) rotate(-10deg);
+    }
+
+    60% {
+        transform: translate(10px, 0) rotate(10deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 576px) {
+
+    .container-general {
+        height: 100vh;
+
+
+    }
+
+}

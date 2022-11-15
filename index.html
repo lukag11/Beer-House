@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beer House</title>
+  <!-- // LINK DE ICONOS PARA LA WEB -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/image/logo-beer.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/image/logo-beer.png" />
+  <!--CSS -->
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="./assets/mediaqueries.css" />
+  <link rel="stylesheet" href="./assets/animaciones.css" />
+  <!-- FONT-AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- //NAV-BAR  y ICONO NAVBAR-->
+  <header>
+    <img src="./assets/image/logo-beer.png" alt="Logo de beer house" class="logo" />
+    <nav class="navbar">
+      <div class="menu-label">
+        <img src="./assets/image/menu-hamb.png" alt="" class="menu-icon" />
+      </div>
+
+      <ul class="navbar-list">
+        <li><a class="navbar-link" href="#hero">Inicio</a></li>
+        <li><a class="navbar-link" href="#products">Cerveza</a></li>
+        <li><a class="navbar-link" href="#delivery">Delivery</a></li>
+        <li><a class="navbar-link" href="#about-us">Nosotros</a></li>
+        <li><a class="navbar-link" href="#Contact">Contacto</a></li>
+        <li><a class="navbar-link login" href="./assets/pages/IniciarSesion.html">Login👤</a></li>
+      </ul>
+      <div class="cart-label">
+
+        <!-- <i class="fa-solid fa-user cart-icon"></i> -->
+        <i class="fa-solid fa-cart-shopping cart-icon"></i>
+      </div>
+
+      <!-- // CARRITO DE COMPRAS -->
+      <div class="cart">
+        <h2>Tus Compras</h2>
+
+        <div class="cart-container"></div>
+
+        <span class="divider"></span>
+
+        <div class="cart-total">
+          <p>Total:</p>
+          <span class="total">$ 0.00</span>
+        </div>
+        <button class="btn-buy">Comprar</button>
+        <button class="btn-delete">Vaciar carrito</button>
+      </div>
+
+      <div class="overlay"></div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- MENU HERO -->
+    <section id="hero">
+      <div class="hero-info">
+        <h1>Bienvenidos descubri nuestra tienda online de cerveza</h1>
+        <p>Donde podés ENCONTRAR tus cervezas favoritas y todo para disfrutar de un Momento Único.
+          Ademas tenemos delivery gratis a todo el pais !
+        </p>
+        <a href="#products">Ir a Tienda</a>
+      </div>
+      <div class="hero-card">
+        <img src="./assets/image/latas/stella-negra.png" alt="lata-stella" />
+        <div class="hero-card-info">
+          <div class="hero-card-top">
+            <h3>Stella Negra</h3>
+
+          </div>
+          <div class="hero-card-bottom">
+            <div class="hero-card-creator">
+
+              <img src="./assets/image/fichatecnica/lupuloicono.png" alt="lupulo icono" class="img-card" />
+
+
+              <img src="./assets/image/fichatecnica/porcentaje.png" alt="porcentaje" class="img-card" />
+              <img src="./assets/image/fichatecnica/sebada.png" alt="sebada" class="img-card" />
+
+            </div>
+
+            <div class="creator-info">
+              <p>Amargor: 6%</p>
+              <p>Alcohol: 5.1%</p>
+              <p>Tipo: Negra</p>
+            </div>
+            <div class="hero-card-price">
+              <p>Precio: $250</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! publicidad -->
+
+    <section id="publicidad">
+
+      <div class="container-publicidad-title">
+        <h2>#Algunos de nuestros productos</h2>
+      </div>
+
+      <ul class="slider">
+        <li id="slide1">
+          <img src="./assets/image/publicidad/heinekenpublicidad.jpg" />
+        </li>
+        <li id="slide2">
+          <img src="./assets/image/publicidad/brahma-publicidad.jpg" />
+        </li>
+        <li id="slide3">
+          <img src="./assets/image/publicidad/budweiser-publicidad-.jpg" />
+        </li>
+      </ul>
+
+      <ul class="menu">
+        <li>
+          <a href="#slide1">1</a>
+        </li>
+        <li>
+          <a href="#slide2">2</a>
+        </li>
+        <li>
+          <a href="#slide3">3</a>
+        </li>
+      </ul>
+
+    </section>
+    <!-- products -->
+    <section id="products">
+      <h2>Nuestra Tienda !!!</h2>
+      <!-- categories -->
+      <div class="categories">
+        <button class="category active">😎Todas</button>
+        <button class="category" data-category="industrial">🍺Industrial</button>
+        <button class="category" data-category="artesanal">🍻Artesanal</button>
+        <button class="category" data-category="accesorio">
+          📌Accesorios
+        </button>
+      </div>
+
+      <!-- products -->
+      <div class="products-container"></div>
+      <button class="btn-load">Ver Más</button>
+    </section>
+    <!-- ! DELIVERY -->
+    <!-- info -->
+    <section id="delivery">
+      <h2>Cerveza Directamente a Casa</h2>
+      <div class="info-cards-container">
+        <div class="info-card">
+          <img src="./assets/image/delivery/card-pay.png" alt="Icono Carrito" />
+          <h3>Realiza tu Pago</h3>
+          <p>
+            Realizando el pago podras seleccionar el destino de tu envio..!
+          </p>
+          <a href="" class="envio">Condiciones de pago</a>
+        </div>
+        <div class="info-card">
+          <img src="./assets/image/delivery/-local-shipping_90041.png" alt="Local" />
+          <h3>Modalidad del envio</h3>
+
+          <p>
+            Entrega en aproximadamente 3-5 días laborables, a tu casa o a un punto de recogida.
+          </p>
+          <a href="" class="envio">Condiciones del envio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! about-us -->
+
+    <section id="about-us">
+      <div class="section-container-about">
+        <div class="section-about" id="about-us">
+          <h2 class="section-title">#Somos Beer House</h2>
+
+          <p class="section-p">Somos una empresa con más de 50 años en el rubro de las bebidas. Todos nuestros
+            productos son originales y garantizamos su origen. Entregamos a todo el País mediante Andreani.
+            Podras encontrar cualquier tipo de cerveza, tambien podes comunicarte a nuestros whatsApp o Correo
+            electronico para realizar un pedido.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! Contact -->
+
+    <section id="Contact">
+
+      <div class="contact-title">
+        <h2 class="section-title-contact">Contactos</h2>
+      </div>
+      <div class="contact-container">
+        <form class="formulario">
+          <!-- // NOMBRE TELEFONO EMAIL MENSAJE -->
+          <label for="user">Nombre</label>
+          <input type="text" placeholder="Ingresa tu Nombre" id="user" />
+          <label for="Telefono">Telefono</label>
+          <input type="number" placeholder="Ingresa tu Numero de Telefono" id="Telefono" />
+          <label for="email">Email</label>
+          <input type="email" placeholder="Ingresa tu Correo Electronico" id="email" />
+          <label for="mensaje">Mensaje</label>
+          <input type="text" placeholder="Mensaje" id="mensaje" class="input-msj" />
+          <input type="submit" value="Enviar" class="btn" />
+        </form>
+      </div>
+
+    </section>
+
+    <!-- ! Section Datos -->
+
+    <div class="section-container-datos">
+      <section class="section-datos">
+        <div class="container-card-datos">
+          <div class="container-datos">
+            <h3 class="title-datos">Contactanos !!</h3>
+            <ul class="container-ul">
+              <li class="list">
+                <a href="#" i class="fa-brands fa-whatsapp"></i> 3571-601731</a>
+              </li>
+              <li class="list">
+                <a href="#" i class="fa-brands fa-at"></i> Lukg2211@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+          <div class="container-datos">
+            <h3 class="title-datos">Ubicacion</h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13497.740035924962!2d-63.970559849999994!3d-32.2463761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1655198312485!5m2!1ses!2sar"
+              width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <span class="divider"></span>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- ! Section Footer -->
+
+  <div class="section-container-footer">
+    <section class="section-card-footer">
+      <div class="card-logo">
+        <img src="./assets/image/logo-beer-text.png" alt="logo compania" class="img-footer">
+      </div>
+
+      <div class="container-card-footer">
+        <div class="card-footer">
+          <h3 class="title-p">Beer House</h3>
+          <p class="desc-p">Beer house, grupo líder mundial en la comercialización, online y offline, de cervezas</p>
+        </div>
+        <div class="card-footer">
+          <h3 class="title-p">Quick Link</h3>
+          <ul class="container-list">
+            <a href="#">
+              <li>About Us</li>
+            </a>
+            <a href="#">
+              <li>Contact Us</li>
+            </a>
+            <a href="#">
+              <li>Contribuite</li>
+            </a>
+            <a href="#">
+              <li>Privacy Policy</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+
+
+    </section>
+
+    <footer class="footer">
+
+      <div class="footer-info">
+        <div class="footer-social">
+          <a href=""> <i class="fab fa-instagram"></i> </a>
+          <a href=""> <i class="fab fa-twitter"></i> </a>
+          <a href=""> <i class="fab fa-facebook-f"></i> </a>
+
+        </div>
+        <p class="footer-copyright">Lgg Copyright @ 2022</p>
+        <div class="footer-terms">
+          <a href="#">Privacidad</a>
+          <a href="#">Términos de uso</a>
+          <a href="#">Contactanos</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <div class="add-modal"></div>
+  <script src="./assets/data.js"></script>
+  <script src="./assets/index.js"></script>
+</body>
+
+</html>
